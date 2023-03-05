@@ -10,9 +10,6 @@ The demo app runs across three containers:
 
 ## Kubernetes Kustomize Manifests
 
-The three pods/containers of this app are in the `./manifests` directory.
+The three pods/containers of this app are in the `./manifests` directory and those files rarely change. They are plain Kubernetes manifests.
 
-
-## Architecture
-
-![Architecture diagram](architecture.excalidraw.png)
+For each environment, we create a directory in `./environments` and add a `kustomization.yaml` file, which is a [Kustomize](https://kustomize.io/) manifest that pulls in the base manifests and adds environment-specific changes.

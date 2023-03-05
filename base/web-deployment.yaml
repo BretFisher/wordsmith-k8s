@@ -16,7 +16,8 @@ spec:
     spec:
       containers:
         - name: web
-          image: <your-org/repo:tag>
+          # FIXME:<your-org/repo:tag>
+          image: bretfisher/wordsmith-web
           ports:
             - containerPort: 80
               name: web

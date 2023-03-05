@@ -6,7 +6,7 @@ metadata:
   labels:
     app: api
 spec:
-  replicas: 5
+  replicas: 2
   selector:
     matchLabels:
       app: api
@@ -17,7 +17,8 @@ spec:
     spec:
       containers:
         - name: api
-          image: <your-org/repo:tag>
+          # FIXME:<your-org/repo:tag>
+          image: bretfisher/wordsmith-api
           ports:
             - containerPort: 8080
               name: api
